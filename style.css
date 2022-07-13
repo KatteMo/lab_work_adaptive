@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: StratosSkyeng;
+    src: url(https://cdn-user53347.skyeng.ru/assets/fonts/stratos/stratosskyengweb-regular.woff2) format("woff2"), url(https://cdn-user53347.skyeng.ru/assets/fonts/stratos/stratosskyengweb-regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.line {
+    font-family: StratosSkyeng, 'Helvetica Neue', sans-serif;
+    background: #1A2F58
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100%;
+    align-items: center;
+}
+
+.line__date-symbol {
+    width: 152px;
+    padding: 20px 0;
+    align-self: stretch;
+    text-align: center;
+
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+
+    background-image: url(./img/Union.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.line__text {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.line__text_green {
+    color: #BCEC30;
+}
+
+.line__text_white {
+    color: #FFFFFF;
+}
+
+.line__button {
+    width: 215px;
+    padding: 8px 18px;
+
+    background: #BCEC30;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-family: StratosSkyeng;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 920px;
+    }
+
+    .line__text {
+        width: 100%;
+        text-align: left;
+    }
+
+    .line__text_green {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 850px;
+    }
+
+    .line__text {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        max-width: 650px;
+    }
+
+    .wrapper {
+        grid-template-columns: auto auto;
+        grid-template-rows: 60px 60px;
+        grid-template-areas:
+            "a b"
+            "a c";
+    }
+
+    .line__date-symbol{
+        grid-area: a;
+        width: 166px;
+        padding: 35px 0;
+    }
+
+    .line__text{
+        grid-area: b;
+    }
+
+    .line__button{
+        grid-area: c;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 320px;
+    }
+
+    .line__date-symbol{
+        display: none;
+    }
+
+    .line__text{
+        font-size: 16px;
+        margin-bottom: 6px;
+        line-height: 20px;
+    }
+
+    .wrapper{
+        display: block;
+        padding: 15px 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 255px;
+    }
+
+    .wrapper{
+        padding: 15px 5%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container{
+        max-width: 200px;
+    }
+
+    .line__button{
+        width: 100%;
+        padding: 5%;
+    }
+}
